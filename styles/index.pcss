@@ -45,6 +45,13 @@
     content: "•";
   }
 
+  &--crossed > &__item::before {
+    content: "✗ ";
+  }
+  &--hooked > &__item::before {
+    content: "✔ ";
+  }
+
   &__settings {
     display: flex;
 
