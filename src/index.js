@@ -376,7 +376,6 @@ export default class NestedList {
         /**
          * For each list we need to update classes
          */
-        console.log("listStyle", style);
         lists.forEach(list => {
             list.classList.toggle(this.CSS.wrapperUnordered, style === 'unordered');
             list.classList.toggle(this.CSS.wrapperOrdered, style === 'ordered');
