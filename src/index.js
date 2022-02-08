@@ -311,9 +311,20 @@ export default class NestedList {
      */
     makeListWrapper(style = this.listStyle, classes = []) {
         const tag = style === 'ordered' ? 'ol' : 'ul';
-        const styleClass = style === 'ordered' ? this.CSS.wrapperOrdered : this.CSS.wrapperUnordered;
-        switch(style) {
-
+        let styleClass;
+        switch (style) {
+            case "hooked":
+                styleClass = this.CSS.wrapperHooked;
+                break;
+            case "crossed":
+                styleClass = this.CSS.wrapperCrossed;
+                break;
+            case "ordered":
+                styleClass = this.CSS.wrapperOrdered;
+                break;
+            default:
+                styleClass = this.CSS.wrapperUnordered;
+                break;
         }
         classes.push(styleClass);
 
